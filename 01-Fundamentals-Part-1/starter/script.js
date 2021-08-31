@@ -1,9 +1,3 @@
-let js = 'amazing';
-
-console.log(40 + 8 + 23 - 10);
-console.log("Jonas");
-console.log(23);
-
 // CamelCase naming convention
 let myFirstSchool = "Pei Chun Public School";
 let myCurrentSchool = "National University of Singapore";
@@ -33,5 +27,16 @@ const does not the value of the variable to be changed
 var is function-scope
 let is block-scope
 */
+const currentYear = 2021;
+const ageOfDarren = currentYear - 2001;
+const ageOfFiona = currentYear - 1999;
+console.log(ageOfDarren, ageOfFiona);
+
+console.log(ageOfDarren, ageOfDarren * 2, ageOfDarren / 5, ageOfDarren ** 2); // 2 ** 3 = 2 power 3 = 8
+
+const myFirstName = "Darren";
 const myLastName = "Choo";
-console.log(typeof myLastName);
+console.log(myFirstName + " " + myLastName); // Darren Choo
+
+console.log(ageOfFiona > ageOfDarren); // true
+console.log(ageOfDarren > ageOfFiona); // false
