@@ -34,10 +34,6 @@ console.log(ageOfDarren, ageOfFiona);
 
 console.log(ageOfDarren, ageOfDarren * 2, ageOfDarren / 5, ageOfDarren ** 2); // 20 40 4 400
 
-const myFirstName = "Darren";
-const myLastName = "Choo";
-console.log(myFirstName + " " + myLastName); // Darren Choo
-
 console.log(ageOfFiona > ageOfDarren); // true
 console.log(ageOfDarren > ageOfFiona); // false
 
@@ -47,3 +43,28 @@ console.log(currentYear - 1999 > currentYear - 2001); // true
 
 let averageAge = (ageOfDarren + ageOfFiona) / 2
 console.log(averageAge);
+
+/*
+// Coding Challenge #1
+let markWeight = prompt("Enter Mark's weight (in kg) : ");
+let markHeight = prompt("Enter Mark's height (in m) : ");
+let johnWeight = prompt("Enter John's weight (in kg) : ");
+let johnHeight = prompt("Enter John's height (in m) : ");
+const markBMI = markWeight / (markHeight ** 2);
+const johnBMI = johnWeight / (johnHeight ** 2);
+const markHigherBMI = markBMI > johnBMI;
+console.log("John's BMI : " + johnBMI);
+console.log("Mark's BMI : " + markBMI);
+console.log(markHigherBMI);
+*/
+
+const myFirstName = "Darren";
+const myLastName = "Choo";
+const myOccupation = "student";
+const myBirthYear = 2001;
+// const myDescription = "I am " + myFirstName + " " + myLastName + ", a " + (currentYear - myBirthYear) + " year old " + myOccupation + "!";
+const myDescription = `I am ${myFirstName} ${myLastName}, a ${(currentYear - myBirthYear)} year old ${myOccupation}.`; // using Template Literals
+console.log(myDescription);
+console.log(`Strings with
+multiple
+lines`);
