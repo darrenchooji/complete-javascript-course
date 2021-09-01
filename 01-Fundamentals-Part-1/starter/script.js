@@ -32,7 +32,7 @@ const ageOfDarren = currentYear - 2001;
 const ageOfFiona = currentYear - 1999;
 console.log(ageOfDarren, ageOfFiona);
 
-console.log(ageOfDarren, ageOfDarren * 2, ageOfDarren / 5, ageOfDarren ** 2); // 2 ** 3 = 2 power 3 = 8
+console.log(ageOfDarren, ageOfDarren * 2, ageOfDarren / 5, ageOfDarren ** 2); // 20 40 4 400
 
 const myFirstName = "Darren";
 const myLastName = "Choo";
@@ -40,3 +40,10 @@ console.log(myFirstName + " " + myLastName); // Darren Choo
 
 console.log(ageOfFiona > ageOfDarren); // true
 console.log(ageOfDarren > ageOfFiona); // false
+
+// JavaScript has operation precedence. Google Mozilla Developer Network (MDN) Operator Precedence for more information
+// Usually, the math operators are executed before the comparison operators.
+console.log(currentYear - 1999 > currentYear - 2001); // true
+
+let averageAge = (ageOfDarren + ageOfFiona) / 2
+console.log(averageAge);
