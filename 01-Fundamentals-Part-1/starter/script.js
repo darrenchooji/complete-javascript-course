@@ -24,22 +24,22 @@ const does not the value of the variable to be changed
 var is function-scope
 let is block-scope
 */
-const currentYear = 2021;
-const ageOfDarren = currentYear - 2001;
-const ageOfFiona = currentYear - 1999;
-console.log(ageOfDarren, ageOfFiona);
+// const currentYear = 2021;
+// const ageOfDarren = currentYear - 2001;
+// const ageOfFiona = currentYear - 1999;
+// console.log(ageOfDarren, ageOfFiona);
 
-console.log(ageOfDarren, ageOfDarren * 2, ageOfDarren / 5, ageOfDarren ** 2); // 20 40 4 400
+// console.log(ageOfDarren, ageOfDarren * 2, ageOfDarren / 5, ageOfDarren ** 2); // 20 40 4 400
 
-console.log(ageOfFiona > ageOfDarren); // true
-console.log(ageOfDarren > ageOfFiona); // false
+// console.log(ageOfFiona > ageOfDarren); // true
+// console.log(ageOfDarren > ageOfFiona); // false
 
 // JavaScript has operation precedence. Google Mozilla Developer Network (MDN) Operator Precedence for more information
 // Usually, the math operators are executed before the comparison operators.
-console.log(currentYear - 1999 > currentYear - 2001); // true
+// console.log(currentYear - 1999 > currentYear - 2001); // true
 
-let averageAge = (ageOfDarren + ageOfFiona) / 2
-console.log(averageAge);
+// let averageAge = (ageOfDarren + ageOfFiona) / 2
+// console.log(averageAge);
 
 /*
 // Coding Challenge #1
@@ -55,6 +55,7 @@ console.log("Mark's BMI : " + markBMI);
 console.log(markHigherBMI);
 */
 
+/*
 const myFirstName = "Darren";
 const myLastName = "Choo";
 const myOccupation = "student";
@@ -83,3 +84,32 @@ else {
     century = 20;
 }
 console.log(century);
+*/
+
+// Coding Challenge 2
+// const markWeight = prompt("Enter Mark's weight (in kg) : ");
+// const markHeight = prompt("Enter Mark's height (in m) : ");
+// const johnWeight = prompt("Enter John's weight (in kg) : ");
+// const johnHeight = prompt("Enter John's height (in m) : ");
+// const markBMI = markWeight / (markHeight ** 2);
+// const johnBMI = johnWeight / (johnHeight ** 2);
+// if (johnBMI > markBMI) {
+//     console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI}})!`);
+// } else {
+//     console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+// }
+
+// Type Conversion
+const randomYear = '1991';
+console.log(Number(randomYear), randomYear);
+console.log(Number(randomYear) + 20);
+
+console.log(Number('Darren')); // NaN
+console.log(typeof NaN);
+
+// Type Coercion
+console.log('I am ' + 20 + " year old."); // '+' sign converts the number to string
+// '-' sign converts the string to number, so does '*' and '/'
+console.log('23' - '10' - 3); // 10
+// comparison operators converts the string to number 
+console.log('23' > '18'); // true
