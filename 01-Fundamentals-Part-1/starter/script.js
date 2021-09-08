@@ -100,16 +100,27 @@ console.log(century);
 // }
 
 // Type Conversion
-const randomYear = '1991';
-console.log(Number(randomYear), randomYear);
-console.log(Number(randomYear) + 20);
+// const randomYear = '1991';
+// console.log(Number(randomYear), randomYear);
+// console.log(Number(randomYear) + 20);
 
-console.log(Number('Darren')); // NaN
-console.log(typeof NaN);
+// console.log(Number('Darren')); // NaN
+// console.log(typeof NaN);
 
 // Type Coercion
-console.log('I am ' + 20 + " year old."); // '+' sign converts the number to string
-// '-' sign converts the string to number, so does '*' and '/'
-console.log('23' - '10' - 3); // 10
-// comparison operators converts the string to number 
-console.log('23' > '18'); // true
+// console.log('I am ' + 20 + " year old."); // '+' sign converts the number to string
+// // '-' sign converts the string to number, so does '*' and '/'
+// console.log('23' - '10' - 3); // 10
+// // comparison operators converts the string to number 
+// console.log('23' > '18'); // true
+
+// 5 Falsy Values: 0, '', undefined, null, NaN
+console.log(Boolean(0)); // False 
+
+let height; // undefined
+if (height) {
+    console.log("YAY! Height is defined!");
+}
+else {
+    console.log("Height is undefined!"); // The else block will be executed
+}
