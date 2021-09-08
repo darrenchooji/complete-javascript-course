@@ -41,6 +41,7 @@ let is block-scope
 // let averageAge = (ageOfDarren + ageOfFiona) / 2
 // console.log(averageAge);
 
+
 /*
 // Coding Challenge #1
 let markWeight = prompt("Enter Mark's weight (in kg) : ");
@@ -54,6 +55,7 @@ console.log("John's BMI : " + johnBMI);
 console.log("Mark's BMI : " + markBMI);
 console.log(markHigherBMI);
 */
+
 
 /*
 const myFirstName = "Darren";
@@ -86,6 +88,7 @@ else {
 console.log(century);
 */
 
+
 // Coding Challenge 2
 // const markWeight = prompt("Enter Mark's weight (in kg) : ");
 // const markHeight = prompt("Enter Mark's height (in m) : ");
@@ -98,6 +101,7 @@ console.log(century);
 // } else {
 //     console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
 // }
+
 
 // Type Conversion
 // const randomYear = '1991';
@@ -114,13 +118,39 @@ console.log(century);
 // // comparison operators converts the string to number 
 // console.log('23' > '18'); // true
 
-// 5 Falsy Values: 0, '', undefined, null, NaN
-console.log(Boolean(0)); // False 
 
-let height; // undefined
-if (height) {
-    console.log("YAY! Height is defined!");
-}
-else {
-    console.log("Height is undefined!"); // The else block will be executed
-}
+// 5 Falsy Values: 0, '', undefined, null, NaN
+// console.log(Boolean(0)); // False 
+
+// let height; // undefined
+// if (height) {
+//     console.log("YAY! Height is defined!");
+// }
+// else {
+//     console.log("Height is undefined!"); // The else block will be executed
+// }
+
+
+// Equality Operators: == vs ===
+// '===' does not perform type coercion, while '==' does perform type coercion
+// const myAge = '20';
+// if (myAge === 20) {
+//     console.log("Strict equality operator"); // This block is not executed as the '20' is not converted
+// }
+// if (myAge == 20) {
+//     console.log("Loose equality operator");
+// }
+
+// const myFavouriteNumber = Number(prompt("What is your favourite number?"));
+// if (myFavouriteNumber === 6) {
+//     console.log(`Cool! 6 is an amazing number`);
+// } else if (myFavouriteNumber === 4) {
+//     console.log(`Cool! 4 is also a cool number`);
+// } else {
+//     console.log(`Number is not 6 or 4`);
+// }
+
+// != vs !==
+// != performs type coercion while !== does not
+// if (myFavouriteNumber !== 6) console.log("Why not 6?"); 
+
