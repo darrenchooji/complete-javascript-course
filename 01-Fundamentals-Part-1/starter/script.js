@@ -203,3 +203,29 @@ switch (day) {
     default:
         console.log("Invalid day");
 }
+
+
+/*
+Statement and Expression
+    Expression is a piece of code that produces a value
+        Example: 3 + 4
+        Must be provided within Template Literals
+    Statements are piece of code that produces an actions, does not produce a value
+        Example: if-else statement
+*/
+
+
+// Conditional Ternary Operator
+const myGpa = 3.91;
+myGpa > 3.5 ? console.log("Good job!!") : console.log("You need to study harder!");
+
+const universityEligibility = myGpa > 3.2 ? true : false;
+console.log(universityEligibility);
+
+console.log(`I am ${myGpa > 3.5 ? 'eligible for univeristy' : 'not eligible for university'}`);
+
+
+// Coding Challenge #4
+// myBill = 275;
+// const myTip = myBill >= 50 && myBill <= 300 ? myBill * 0.15 : myBill * 0.2;
+// console.log(myTip + myBill, myTip);
