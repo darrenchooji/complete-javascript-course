@@ -52,3 +52,20 @@ const calculateAge2 = function (birthYear) {
 const age2 =  calculateAge2(2008);
 
 console.log(age1, age2);
+
+
+/*
+Arrow Functions (Introduced in ES6)
+Special form of Function Expressions that is shorter and faster to write
+Does not have a 'this' keyword
+*/
+const calculateAge3 = birthYear => 2021 - birthYear;
+console.log(calculateAge3(1999));
+
+// Arrow Functions with multiple lines and multiple parameters
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2021 - birthYear;
+    const retirement = 65 - age;
+    return `${firstName} retires in ${retirement} years`;
+}
+console.log(yearsUntilRetirement(2001, "Darren"));
