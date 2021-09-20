@@ -107,7 +107,7 @@ console.log(fruitProcessor2(2, 3));
 Introduction to Arrays
 Array is a data structure.
 */
-const friends = ['Joash', 'Daniel', 'Elijah'];
+let friends = ['Joash', 'Daniel', 'Elijah'];
 // const years = new Array(1999, 2001, 2008); // An alternative way of writing arrays
 console.log(friends);
 console.log(friends.length); // 3
@@ -122,3 +122,51 @@ const calcAge = function (birthYear) {
 const years = [1999, 2001, 2008];
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length-1])];
 console.log(ages);
+
+
+/*
+Basic Array Operations (Methods)
+
+UNSHIFT and PUSH methods returns the new length of the array.
+SHIFT and POP methods returns the name of the removed element.
+
+INDEXOF and INCLUDES methods do not perform type coercion. Strict equality.
+INDEXOF method returns the integer value of the position of the element in the array. If the element does not exist, '-1' will be returned instead.
+INCLUDES method returns a boolean value of the existence of the element in the array. 
+*/
+friends = ["Fiona", "Martin", "Elijah"];
+friends.push("Jayden"); // Adds a new element, 'Jayden' to the end of the array
+friends.unshift("Jack"); // Adds a new element, 'Jack' to the start of the array
+friends.pop(); // Removes the last element of the array
+friends.shift(); // Removes the first element of the array
+console.log(friends);
+
+console.log(friends.indexOf("Fiona")); // 0
+console.log(friends.includes("Fiona")); // true
+
+
+// Coding Challenge #2
+const calculateTip = function (bill) {
+    if (bill > 50 && bill < 300) 
+        return bill * 0.15;
+    else 
+        return bill * 0.2;
+};
+const bills = [125, 555, 44];
+const tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
+console.log(tips);
+const totals = [tips[0]+bills[0], tips[1]+bills[1], tips[2]+bills[2]];
+console.log(totals);
+
+
+/*
+Introduction to Objects
+Another data structure.
+*/
+const darrenObject = {
+    firstName: 'Darren',
+    lastName: 'Choo',
+    age: 2021 - 2001, 
+    school: 'National University of Singapore',
+    friends: ['Fiona', 'Elijah', 'Martin']
+};
