@@ -16,19 +16,12 @@ Any code that is written prior to the activation of strict mode will be ignored.
 Functions
 Chunks of code that can be reused multiple times.
 */
-function logger() {
-    console.log("My name is Darren Choo");
-}
-logger();
-
 function fruitProcessor1(numberOfApples, numberOfGrapes) {
     const juice = `Juice with ${numberOfApples} Apples and ${numberOfGrapes} Grapes`;
     return juice;
 }
 const appleGrapeJuice = fruitProcessor1(5, 2);
 console.log(appleGrapeJuice);
-const appleJuice = fruitProcessor1(5, 0);
-console.log(appleJuice);
 
 // Built-in Function
 console.log(Number('23')); // Converts '23' to a number type
@@ -50,7 +43,6 @@ const calculateAge2 = function (birthYear) {
     return 2021 - birthYear;
 }
 const age2 =  calculateAge2(2008);
-
 console.log(age1, age2);
 
 
@@ -146,27 +138,102 @@ console.log(friends.includes("Fiona")); // true
 
 
 // Coding Challenge #2
-const calculateTip = function (bill) {
-    if (bill > 50 && bill < 300) 
-        return bill * 0.15;
-    else 
-        return bill * 0.2;
-};
-const bills = [125, 555, 44];
-const tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
-console.log(tips);
-const totals = [tips[0]+bills[0], tips[1]+bills[1], tips[2]+bills[2]];
-console.log(totals);
+// const calculateTip = function (bill) {
+//     if (bill > 50 && bill < 300) 
+//         return bill * 0.15;
+//     else 
+//         return bill * 0.2;
+// };
+// const bills = [125, 555, 44];
+// const tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
+// console.log(tips);
+// const totals = [tips[0]+bills[0], tips[1]+bills[1], tips[2]+bills[2]];
+// console.log(totals);
 
 
-/*
-Introduction to Objects
-Another data structure.
-*/
-const darrenObject = {
+// Introduction to Objects
+const darrenObject1 = {
     firstName: 'Darren',
     lastName: 'Choo',
     age: 2021 - 2001, 
     school: 'National University of Singapore',
     friends: ['Fiona', 'Elijah', 'Martin']
 };
+
+/*
+Dot vs Bracket Notations
+Bracket Notations allow for concatenations whereas Dot Notations does not allow concatenations
+*/
+console.log(darrenObject1.lastName); // Choo
+const nameKey = 'Name';
+console.log(darrenObject1['last'+nameKey]); // Choo
+
+// Adding properties to objects
+darrenObject1.location = 'Singapore';
+darrenObject1['instagram'] = '@darrenchooji'; 
+console.log(darrenObject1);
+console.log(darrenObject1.friends.length); // 3
+
+
+/*
+Object Methods
+A function within an object
+*/
+const darrenObject2 = {
+    firstName: 'Darren',
+    lastName: 'Choo',
+    birthYear: 2001,
+    school: 'NUS',
+    friends: ['Fiona', 'Jayden', 'Elijah'],
+    hasDriversLicense: false,
+
+    // calcAge: function (birthYear) {
+    //     return 2021 - birthYear;
+    // }
+    calcAge: function () {
+        this.age = 2021 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} year-old studying, studying at ${this.school}. He ${this.hasDriversLicense ? "does have" : "does not have"} driver's license.`;
+    }
+};
+// console.log(darrenObject2.calcAge(darrenObject2.birthYear));
+// console.log(darrenObject2['calcAge'](darrenObject2['birthYear']));
+console.log(darrenObject2.calcAge());
+console.log(darrenObject2.age);
+console.log(darrenObject2.getSummary());
+
+
+// Coding Challenge #3
+// const mark = {
+//     firstName: 'Mark',
+//     lastName: 'Miller',
+//     mass: 78,
+//     height: 1.69,
+
+//     calcBMI: function () {
+//         this.bmi = this.mass / this.height ** 2
+//         return this.bmi;
+//     }
+// };
+// const john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     mass: 92,
+//     height: 1.95,
+
+//     calcBMI: function () {
+//         this.bmi =  this.mass / this.height ** 2
+//         return this.bmi;
+//     }
+// };
+// john.calcBMI();
+// mark.calcBMI();
+// if (john.bmi > mark.bmi) 
+//     console.log(`John's BMI (${john.bmi}) is higher than Mark's BMI (${mark.bmi})`);
+// else 
+//     console.log(`Mark's BMI (${mark.bmi}) is higher than John's BMI (${john.bmi})`);
+
+
