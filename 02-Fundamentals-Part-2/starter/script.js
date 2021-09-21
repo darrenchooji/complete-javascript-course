@@ -237,3 +237,96 @@ console.log(darrenObject2.getSummary());
 //     console.log(`Mark's BMI (${mark.bmi}) is higher than John's BMI (${john.bmi})`);
 
 
+
+// Iteration: The for Loop
+for (let rep=1; rep<=5; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+}
+
+
+/*
+Looping Arrays, Breaking, and Continuing
+CONTINUE: To exit the current iteration of the loop and enter the next.
+BREAK: To terminate the loop.
+*/
+const darrenArray1 = [
+    'Darren',
+    'Choo',
+    2021 - 2001,
+    'National University of Singapore',
+    ['Fiona', 'Caryl', 'Erika']
+];
+const types = [];
+for (let i=0; i<darrenArray1.length; i++) {
+    if (typeof darrenArray1[i] !==  'string') continue;
+    types.push(typeof darrenArray1[i]);
+}
+console.log(types);
+for (let i=0; i<darrenArray1.length; i++) {
+    if (typeof darrenArray1[i] === 'number') break;
+    console.log(darrenArray1[i], typeof darrenArray1[i]);
+}
+
+
+
+// Looping Backwards and Loops in Loops
+const darrenArray2 = [
+    'Darren',
+    'Choo',
+    2021 - 2001,
+    'National University of Singapore',
+    ['Fiona', 'Caryl', 'Erika']
+];
+for (let i = darrenArray2.length - 1; i >= 0; i--) {
+    console.log(darrenArray2[i]);
+}
+
+const exercise = ['Squat', 'Bench Press', 'Deadlift'];
+for (let i=0; i<exercise.length; i++) {
+    for (let j=1; j<=5; j++) {
+        console.log(`Lifting weights for ${exercise[i]} for repetition ${j} 🏋️‍♂️`);
+    }
+}
+
+
+// The while Loop
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log("Loop is about to end...");
+}
+
+
+// Coding Challenge #4
+// const bills4 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// let tips4 = [];
+// let totals4 = [];
+// const calculateTip4 = function (bill) {
+//     if (bill > 50 && bill < 300) 
+//         return bill * 0.15;
+//     else 
+//         return bill * 0.2;
+// };
+// for (let i=0; i<bills4.length; i++) {
+//     let tip = calculateTip4(bills4[i]);
+//     tips4.push(tip);
+//     totals4.push(tip + bills4[i]);
+// }
+// const calcualteAverage4 = function (totals) {
+//     let total = 0;
+//     for (let i=0; i<totals.length; i++) {
+//         total += totals[i];
+//     }
+//     return total / totals.length;
+// }
+// console.log(bills4, tips4, totals4);
+// console.log(calcualteAverage4(totals4));
+// console.log(calcualteAverage4(tips4));
+// console.log(calcualteAverage4(bills4));
